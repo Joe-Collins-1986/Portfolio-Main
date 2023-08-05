@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
-import portfolioImage from "../assets/images/porfolio_image.png";
 
 const Home = () => {
   return (
