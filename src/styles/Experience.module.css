@@ -1,0 +1,54 @@
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* min-height: auto; */
+  padding-bottom: 5rem;
+}
+
+.experience .experienceRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.experienceRow .experienceColumn {
+  flex: 1 1 40rem;
+}
+
+.experienceColumn .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.experienceColumn .experienceBox {
+  border-left: 0.2rem solid var(--main-color);
+}
+
+.experienceBox .experienceContent {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experienceContent .content {
+  position: relative;
+  padding: 1.5rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.experienceContent .content .year {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.experienceContent .content .year .icon {
+  padding-right: 0.5rem;
+}
+
+.experienceContent .content h3 {
+  font-size: 2rem;
+}

@@ -6,7 +6,7 @@ import image from "../assets/images/portfolio_face.png";
 const About = () => {
   return (
     <section className={styles.about} id="about">
-      <h2 className={styles.heading}>
+      <h2 className={uStyles.heading}>
         About <span>Me</span>
       </h2>
 
