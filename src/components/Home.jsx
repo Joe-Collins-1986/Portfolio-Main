@@ -40,6 +40,8 @@ const Home = () => {
           <PiGithubLogoFill />
         </a>
       </div>
+
+      <div className={styles.homeImgHover}></div>
     </section>
   );
 };

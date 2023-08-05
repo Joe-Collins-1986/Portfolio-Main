@@ -5,10 +5,12 @@
   background: url("/src/assets/images/portfolio_bg.png");
   background-size: cover;
   background-position: 250px center;
+  z-index: -1;
 }
 
 .homeContent {
   max-width: 60rem;
+  z-index: 1;
 }
 
 .homeContent h1 {
@@ -140,4 +142,19 @@
 
 .homeSci a:hover::before {
   transform: scale(1);
+}
+
+.homeImgHover {
+  position: absolute;
+  top: 0;
+  left: 60rem;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+
+.homeImgHover:hover {
+  background: var(--bg-color);
+  opacity: 0.8;
 }
