@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
+import uStyles from "../styles/MultiUse.module.css";
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 
@@ -19,11 +20,11 @@ const Home = () => {
           tenetur culpa, temporibus minima iste quae ab vel dolorum esse?
         </p>
 
-        <div className={styles.btnBox}>
-          <a href="#" className={styles.btn}>
+        <div className={uStyles.btnBox}>
+          <a href="#" className={uStyles.btn}>
             Hire Me
           </a>
-          <a href="#" className={styles.btn}>
+          <a href="#" className={uStyles.btn}>
             Let's Talk
           </a>
         </div>
