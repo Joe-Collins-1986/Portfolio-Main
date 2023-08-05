@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
-import {
-  BiLogoFacebook,
-  BiLogoTwitter,
-  BiLogoInstagram,
-  BiLogoGithub,
-} from "react-icons/bi";
+import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram } from "react-icons/bi";
+import { PiGithubLogoFill } from "react-icons/pi";
 import portfolioImage from "../assets/images/porfolio_image.png";
 
 const Home = () => {
@@ -32,20 +28,18 @@ const Home = () => {
             Let's Talk
           </a>
         </div>
-        <div className="socialMedia">
-          <a href="#">
-            <BiLogoFacebook />
-          </a>
-          <a href="#">
-            <BiLogoTwitter />
-          </a>
-          <a href="#">
-            <BiLogoInstagram />
-          </a>
-          <a href="#">
-            <BiLogoGithub />
-          </a>
-        </div>
+      </div>
+
+      <div className={styles.homeSci}>
+        <a href="#">
+          <BiLogoFacebook />
+        </a>
+        <a href="#">
+          <BiLogoTwitter />
+        </a>
+        <a href="#">
+          <PiGithubLogoFill />
+        </a>
       </div>
     </section>
   );
