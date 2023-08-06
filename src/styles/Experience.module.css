@@ -31,12 +31,40 @@
   padding-left: 2rem;
 }
 
+.experienceBox .experienceContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+
 .experienceContent .content {
   position: relative;
   padding: 1.5rem;
   border: 0.2rem solid var(--main-color);
   border-radius: 0.6rem;
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.experienceContent .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.experienceContent .content:hover::before {
+  width: 100%;
 }
 
 .experienceContent .content .year {
