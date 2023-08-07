@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar2.module.css";
 import { HiMenu } from "react-icons/hi";
+import { useSection } from "../hooks/useSection";
 
 const NavBar2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const activeSection = useSection([
+    "home",
+    "about",
+    "experience",
+    "skills",
+    "contact",
+  ]);
 
   useEffect(() => {
     const scrollListener = () => {
@@ -32,13 +40,36 @@ const NavBar2 = () => {
       />
 
       <nav className={styles.navBar}>
-        <a href="#home" className={styles.active}>
+        <a
+          href="#home"
+          className={activeSection === "home" ? styles.active : ""}
+        >
           Home
         </a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a
+          href="#about"
+          className={activeSection === "about" ? styles.active : ""}
+        >
+          About
+        </a>
+        <a
+          href="#experience"
+          className={activeSection === "experience" ? styles.active : ""}
+        >
+          Experience
+        </a>
+        <a
+          href="#skills"
+          className={activeSection === "skills" ? styles.active : ""}
+        >
+          Skills
+        </a>
+        <a
+          href="#contact"
+          className={activeSection === "contact" ? styles.active : ""}
+        >
+          Contact
+        </a>
       </nav>
     </header>
   );
