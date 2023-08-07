@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar2.module.css";
 import { HiMenu } from "react-icons/hi";
 
 const NavBar2 = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const scrollListener = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", scrollListener);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
+
   return (
-    <header className={styles.navContainer}>
+    <header
+      className={`${styles.navContainer} ${isScrolled ? styles.sticky : ""}`}
+    >
       <a href="#" className={styles.logo}>
         Joe
       </a>
