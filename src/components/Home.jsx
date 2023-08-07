@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import uStyles from "../styles/MultiUse.module.css";
-import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram } from "react-icons/bi";
+import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 
 const Home = () => {
