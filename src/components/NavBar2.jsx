@@ -4,7 +4,7 @@ import { HiMenu } from "react-icons/hi";
 
 const NavBar2 = () => {
   return (
-    <div className={styles.navContainer}>
+    <header className={styles.navContainer}>
       <a href="#" className={styles.logo}>
         Joe
       </a>
@@ -23,7 +23,7 @@ const NavBar2 = () => {
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
+    </header>
   );
 };
 
