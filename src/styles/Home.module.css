@@ -83,11 +83,11 @@
   transform: scale(1);
 }
 
-/* .homeImgHover {
+.homeImgHover {
   position: absolute;
   top: 0;
   left: 60rem;
-  width: 100%;
+  width: calc(100vw - 60rem);
   height: 100%;
   background: transparent;
   transition: 3s;
@@ -96,4 +96,4 @@
 .homeImgHover:hover {
   background: var(--bg-color);
   opacity: 0.8;
-} */
+}
