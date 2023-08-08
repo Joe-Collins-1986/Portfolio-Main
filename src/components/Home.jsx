@@ -15,9 +15,19 @@ const Home = () => {
           <h3>Fullstack Developer</h3>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-          aperiam? Dolore sit dignissimos corrupti hic amet exercitationem,
-          tenetur culpa, temporibus minima iste quae ab vel dolorum esse?
+          Welcome to the creative frontier of innovation and design.
+          <br />
+          <br /> Work with me to bring your digital dreams to life through the
+          seamless blend of Python and Django's robust functionality with
+          React's dynamic JavaScript library.
+          <br />
+          <br />
+          Journey through my portfolio showcasing not just a proficiency in
+          cutting-edge web development, but a dedication to transforming complex
+          problems into user-friendly solutions.
+          <br />
+          <br />
+          Let's explore what's possible together!
         </p>
 
         <div className={uStyles.btnBox}>
