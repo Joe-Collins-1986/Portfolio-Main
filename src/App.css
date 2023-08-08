@@ -18,8 +18,8 @@
   --main-color: #00abf0;
 }
 
-html {
-  position: relative;
+html,
+body {
   font-size: 62.5%;
   overflow-x: hidden;
 }
