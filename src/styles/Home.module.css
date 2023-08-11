@@ -97,3 +97,10 @@
   background: var(--bg-color);
   opacity: 0.8;
 }
+
+/* BREAKPOINTS */
+@media (max-width: 991px) {
+  .home {
+    padding: 0 4%;
+  }
+}

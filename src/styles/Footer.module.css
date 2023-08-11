@@ -59,3 +59,10 @@
 .footerIconTop a:hover::before {
   transform: scale(1);
 }
+
+/* BREAKPOINT */
+@media (max-width: 991px) {
+  .footer {
+    padding: 2rem 4%;
+  }
+}
