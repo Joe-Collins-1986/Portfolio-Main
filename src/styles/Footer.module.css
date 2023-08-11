@@ -66,3 +66,13 @@
     padding: 2rem 4%;
   }
 }
+
+@media (max-width: 520px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    margin-top: 2rem;
+  }
+}

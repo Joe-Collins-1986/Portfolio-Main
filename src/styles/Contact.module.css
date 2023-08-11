@@ -71,3 +71,9 @@
 button {
   cursor: pointer;
 }
+
+@media (max-width: 520px) {
+  .contact form .inputBox .inputField {
+    width: 100%;
+  }
+}
