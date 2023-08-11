@@ -15,11 +15,9 @@ const Home = () => {
           <h3>Fullstack Developer</h3>
         </div>
         <p>
-          Welcome to the creative frontier of innovation and design.
-          <br />
-          <br /> Work with me to bring your digital dreams to life through the
-          seamless blend of Python and Django's robust functionality with
-          React's dynamic JavaScript library.
+          Work with me to bring your digital dreams to life through the seamless
+          blend of Python and Django's robust functionality with React's dynamic
+          JavaScript library.
           <br />
           <br />
           Journey through my portfolio showcasing not just a proficiency in
