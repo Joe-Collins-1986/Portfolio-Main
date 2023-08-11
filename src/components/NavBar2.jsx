@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/NavBar2.module.css";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -7,6 +7,7 @@ import { useSection } from "../hooks/useSection";
 const NavBar2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHamActive, setHamActive] = useState(false);
+  const navRef = useRef(null);
   const activeSection = useSection([
     "home",
     "about",
@@ -20,16 +21,28 @@ const NavBar2 = () => {
       setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener("scroll", scrollListener);
+    const handleClickOutside = (event) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        isHamActive
+      ) {
+        setHamActive(false);
+      }
+    };
 
-    // Clean up the event listener on unmount
+    window.addEventListener("scroll", scrollListener);
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       window.removeEventListener("scroll", scrollListener);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [isHamActive]);
 
   return (
     <header
+      ref={navRef}
       className={`${styles.navContainer} ${isScrolled ? styles.sticky : ""}`}
     >
       <a href="#" className={styles.logo}>
