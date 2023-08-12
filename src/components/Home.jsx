@@ -20,11 +20,6 @@ const Home = () => {
           JavaScript library.
           <br />
           <br />
-          Journey through my portfolio showcasing not just a proficiency in
-          cutting-edge web development, but a dedication to transforming complex
-          problems into user-friendly solutions.
-          <br />
-          <br />
           Let's explore what's possible together!
         </p>
 
