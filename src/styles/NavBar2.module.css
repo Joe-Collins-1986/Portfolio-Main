@@ -1,3 +1,7 @@
+header div {
+  position: relative;
+}
+
 .navContainer {
   position: fixed;
   top: 0;
@@ -17,9 +21,14 @@
 }
 
 .logo {
+  position: relative;
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
+}
+
+.navBar {
+  position: relative;
 }
 
 .navBar a {

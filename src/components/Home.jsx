@@ -10,9 +10,18 @@ const Home = () => {
       <div className={styles.homeContent}>
         <h1>
           Hello, I'm <span>Joe Collins</span>
+          <span
+            className={`${uStyles.animate} ${uStyles.animate1}`}
+            style={{ "--i": 2 }}
+          ></span>
         </h1>
+
         <div className={styles.textAnimate}>
           <h3>Fullstack Developer</h3>
+          <span
+            className={`${uStyles.animate} ${uStyles.animate1}`}
+            style={{ "--i": 3 }}
+          ></span>
         </div>
         <p>
           Work with me to bring your digital dreams to life through the seamless
@@ -21,6 +30,10 @@ const Home = () => {
           <br />
           <br />
           Let's explore what's possible together!
+          <span
+            className={`${uStyles.animate} ${uStyles.animate1}`}
+            style={{ "--i": 4 }}
+          ></span>
         </p>
 
         <div className={uStyles.btnBox}>
@@ -30,6 +43,10 @@ const Home = () => {
           <a href="#" className={uStyles.btn}>
             Let's Talk
           </a>
+          <span
+            className={`${uStyles.animate} ${uStyles.animate1}`}
+            style={{ "--i": 5 }}
+          ></span>
         </div>
       </div>
 
@@ -43,9 +60,17 @@ const Home = () => {
         <a href="#">
           <PiGithubLogoFill />
         </a>
+        <span
+          className={`${uStyles.animate} ${uStyles.animate1}`}
+          style={{ "--i": 6 }}
+        ></span>
       </div>
 
       <div className={styles.homeImgHover}></div>
+      <span
+        className={`${uStyles.animate} ${uStyles.animate1} ${uStyles.animateImage}`}
+        style={{ "--i": 7 }}
+      ></span>
     </section>
   );
 };

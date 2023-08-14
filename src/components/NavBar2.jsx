@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/NavBar2.module.css";
+import uStyles from "../styles/MultiUse.module.css";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useSection } from "../hooks/useSection";
@@ -47,19 +48,29 @@ const NavBar2 = () => {
     >
       <a href="#" className={styles.logo}>
         Joe
+        <span
+          className={`${uStyles.animate} ${uStyles.animate1}`}
+          style={{ "--i": 1 }}
+        ></span>
       </a>
 
-      {!isHamActive ? (
-        <HiMenu
-          className={styles.menuIcon}
-          onClick={() => setHamActive(true)}
-        />
-      ) : (
-        <AiOutlineClose
-          className={styles.menuIcon}
-          onClick={() => setHamActive(false)}
-        />
-      )}
+      <div>
+        {!isHamActive ? (
+          <HiMenu
+            className={styles.menuIcon}
+            onClick={() => setHamActive(true)}
+          />
+        ) : (
+          <AiOutlineClose
+            className={styles.menuIcon}
+            onClick={() => setHamActive(false)}
+          />
+        )}
+        <span
+          className={`${uStyles.animate} ${uStyles.animate1}`}
+          style={{ "--i": 2 }}
+        ></span>
+      </div>
 
       <nav
         className={`${styles.navBar} ${isHamActive ? styles.navActive : ""}`}
@@ -99,6 +110,11 @@ const NavBar2 = () => {
         >
           Contact
         </a>
+
+        <span
+          className={`${uStyles.animate} ${uStyles.animate1}`}
+          style={{ "--i": 2 }}
+        ></span>
       </nav>
     </header>
   );

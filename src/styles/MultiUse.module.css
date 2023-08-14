@@ -73,3 +73,34 @@
 .btnBox.btns a::before {
   background: var(--second-bg-color);
 }
+
+/* ANIMATE */
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: 1;
+}
+
+.animate.animate1.animateImage {
+  width: calc(100vw - 60rem);
+}
+
+.animate.animate1 {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+.sectionAnimate .animate.animate1 {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
