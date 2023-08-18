@@ -13,8 +13,9 @@ const NavBar2 = () => {
   const activeSection = useSection([
     "home",
     "about",
+    "portfolio",
     "experience",
-    "skills",
+    // "skills",
     "contact",
   ]);
 
@@ -83,19 +84,26 @@ const NavBar2 = () => {
           About
         </a>
         <a
+          href="#portfolio"
+          className={activeSection === "portfolio" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          Portfolio
+        </a>
+        <a
           href="#experience"
           className={activeSection === "experience" ? styles.active : ""}
           onClick={() => setHamActive(false)}
         >
           Experience
         </a>
-        <a
+        {/* <a
           href="#skills"
           className={activeSection === "skills" ? styles.active : ""}
           onClick={() => setHamActive(false)}
         >
           Skills
-        </a>
+        </a> */}
         <a
           href="#contact"
           className={activeSection === "contact" ? styles.active : ""}
