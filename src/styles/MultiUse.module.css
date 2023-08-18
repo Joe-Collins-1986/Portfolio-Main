@@ -1,4 +1,5 @@
 .heading {
+  position: relative;
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -75,26 +76,32 @@
 }
 
 /* ANIMATE */
-.animate {
+.animateBg {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: red;
+  background: var(--bg-color);
   z-index: 1;
 }
 
-.animate.animate1.animateImage {
+.animateSecBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: 1;
+}
+
+.animateBg.animate1.animateImage {
   width: calc(100vw - 60rem);
 }
 
-.animate.animate1 {
-  animation: showRight 1s ease forwards;
-  animation-delay: calc(0.3s * var(--i));
-}
-
-.sectionAnimate .animate.animate1 {
+.animateBg.animate1,
+.animateSecBg.animate1 {
   animation: showRight 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
 }

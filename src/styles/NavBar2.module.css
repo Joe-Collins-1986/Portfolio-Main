@@ -21,14 +21,14 @@ header div {
 }
 
 .logo {
-  position: relative;
+  /* position: relative; */
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
 }
 
 .navBar {
-  position: relative;
+  /* position: relative; */
 }
 
 .navBar a {

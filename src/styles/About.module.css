@@ -6,13 +6,14 @@
   gap: 2rem;
   background: var(--second-bg-color);
   padding-bottom: 6rem;
+  z-index: 0;
 }
 
-.heading {
+/* .heading {
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
-}
+} */
 
 .aboutImg {
   position: relative;
@@ -50,10 +51,13 @@
 }
 
 .aboutContent h3 {
+  position: relative;
+  display: inline-block;
   font-size: 2.6rem;
 }
 
 .aboutContent p {
+  position: relative;
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }

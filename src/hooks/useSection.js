@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import uStyle from "../styles/MultiUse.module.css";
 
 export const useSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState("");
@@ -12,9 +11,6 @@ export const useSection = (sectionIds) => {
         sections.forEach((section) => {
           if (section.isIntersecting) {
             setActiveSection(section.target.id);
-            section.target.classList.add(activeClass);
-          } else {
-            section.target.classList.remove(activeClass);
           }
         });
       },

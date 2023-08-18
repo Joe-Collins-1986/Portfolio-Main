@@ -49,7 +49,7 @@ const NavBar2 = () => {
       <a href="#" className={styles.logo}>
         Joe
         <span
-          className={`${uStyles.animate} ${uStyles.animate1}`}
+          className={`${uStyles.animateBg} ${uStyles.animate1}`}
           style={{ "--i": 1 }}
         ></span>
       </a>
@@ -67,8 +67,8 @@ const NavBar2 = () => {
           />
         )}
         <span
-          className={`${uStyles.animate} ${uStyles.animate1}`}
-          style={{ "--i": 2 }}
+          className={`${uStyles.animateBg} ${uStyles.animate1}`}
+          style={{ "--i": 1 }}
         ></span>
       </div>
 
@@ -112,8 +112,8 @@ const NavBar2 = () => {
         </a>
 
         <span
-          className={`${uStyles.animate} ${uStyles.animate1}`}
-          style={{ "--i": 2 }}
+          className={`${uStyles.animateBg} ${uStyles.animate1}`}
+          style={{ "--i": 1 }}
         ></span>
       </nav>
     </header>
