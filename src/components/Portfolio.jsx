@@ -39,6 +39,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={2}
+          />
         </div>
 
         <div className={styles.portfolioBox}>
@@ -53,6 +58,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={3}
+          />
         </div>
 
         <div className={styles.portfolioBox}>
@@ -67,6 +77,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={4}
+          />
         </div>
 
         <div className={styles.portfolioBox}>
@@ -81,6 +96,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={5}
+          />
         </div>
 
         <div className={styles.portfolioBox}>
@@ -95,6 +115,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={6}
+          />
         </div>
 
         <div className={styles.portfolioBox}>
@@ -109,6 +134,11 @@ const Portfolio = () => {
               <BiLinkExternal className={styles.link} />
             </a>
           </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={7}
+          />
         </div>
       </div>
     </section>
