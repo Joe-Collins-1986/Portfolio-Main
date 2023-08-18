@@ -4,8 +4,6 @@ export const useSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const activeClass = "sectionAnimate";
-
     const observer = new IntersectionObserver(
       (sections) => {
         sections.forEach((section) => {

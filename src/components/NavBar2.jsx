@@ -4,6 +4,7 @@ import uStyles from "../styles/MultiUse.module.css";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useSection } from "../hooks/useSection";
+import SpanSwipe from "./SpanSwipe";
 
 const NavBar2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,10 +49,6 @@ const NavBar2 = () => {
     >
       <a href="#" className={styles.logo}>
         Joe
-        <span
-          className={`${uStyles.animateBg} ${uStyles.animate1}`}
-          style={{ "--i": 1 }}
-        ></span>
       </a>
 
       <div>
@@ -66,10 +63,6 @@ const NavBar2 = () => {
             onClick={() => setHamActive(false)}
           />
         )}
-        <span
-          className={`${uStyles.animateBg} ${uStyles.animate1}`}
-          style={{ "--i": 1 }}
-        ></span>
       </div>
 
       <nav
@@ -110,11 +103,6 @@ const NavBar2 = () => {
         >
           Contact
         </a>
-
-        <span
-          className={`${uStyles.animateBg} ${uStyles.animate1}`}
-          style={{ "--i": 1 }}
-        ></span>
       </nav>
     </header>
   );

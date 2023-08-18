@@ -4,6 +4,7 @@ import uStyles from "../styles/MultiUse.module.css";
 import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
+import SpanSwipe from "./SpanSwipe";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
@@ -13,26 +14,20 @@ const Home = () => {
       <div className={styles.homeContent}>
         <h1>
           Hello, I'm <span>Joe Collins</span>
-          {activeSection ? (
-            <span
-              className={`${uStyles.animateBg} ${uStyles.animate1}`}
-              style={{ "--i": 2 }}
-            ></span>
-          ) : (
-            <span className={uStyles.animateBg}></span>
-          )}
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={2}
+          />
         </h1>
 
         <div className={styles.textAnimate}>
           <h3>Fullstack Developer</h3>
-          {activeSection ? (
-            <span
-              className={`${uStyles.animateBg} ${uStyles.animate1}`}
-              style={{ "--i": 3 }}
-            ></span>
-          ) : (
-            <span className={uStyles.animateBg}></span>
-          )}
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={3}
+          />
         </div>
         <p>
           Work with me to bring your digital dreams to life through the seamless
@@ -41,14 +36,11 @@ const Home = () => {
           <br />
           <br />
           Let's explore what's possible together!
-          {activeSection ? (
-            <span
-              className={`${uStyles.animateBg} ${uStyles.animate1}`}
-              style={{ "--i": 4 }}
-            ></span>
-          ) : (
-            <span className={uStyles.animateBg}></span>
-          )}
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={4}
+          />
         </p>
 
         <div className={uStyles.btnBox}>
@@ -58,14 +50,11 @@ const Home = () => {
           <a href="#" className={uStyles.btn}>
             Let's Talk
           </a>
-          {activeSection ? (
-            <span
-              className={`${uStyles.animateBg} ${uStyles.animate1}`}
-              style={{ "--i": 5 }}
-            ></span>
-          ) : (
-            <span className={uStyles.animateBg}></span>
-          )}
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={5}
+          />
         </div>
       </div>
 
@@ -79,26 +68,21 @@ const Home = () => {
         <a href="#">
           <PiGithubLogoFill />
         </a>
-        {activeSection ? (
-          <span
-            className={`${uStyles.animateBg} ${uStyles.animate1}`}
-            style={{ "--i": 6 }}
-          ></span>
-        ) : (
-          <span className={uStyles.animate}></span>
-        )}
+        <SpanSwipe
+          activeSection={activeSection}
+          colour={"animateBg"}
+          delay={6}
+        />
       </div>
 
       <div className={styles.homeImgHover}></div>
 
-      {activeSection ? (
-        <span
-          className={`${uStyles.animateBg} ${uStyles.animate1} ${uStyles.animateImage}`}
-          style={{ "--i": 7 }}
-        ></span>
-      ) : (
-        <span className={uStyles.animateBg}></span>
-      )}
+      <SpanSwipe
+        activeSection={activeSection}
+        colour={"animateBg"}
+        delay={6}
+        image={true}
+      />
     </section>
   );
 };
