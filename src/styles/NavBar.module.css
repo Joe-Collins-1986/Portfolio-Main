@@ -42,7 +42,6 @@
 .NavBarToggler {
   display: none;
   cursor: pointer;
-  border: 2px solid red;
   padding: 10px 10px 15px 25px;
 }
 
