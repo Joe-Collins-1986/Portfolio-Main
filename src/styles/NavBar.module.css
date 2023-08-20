@@ -1,19 +1,14 @@
-header div {
-  position: relative;
-}
-
 .navContainer {
   position: fixed;
+  z-index: 9999;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 2rem 10%;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  transition: 3s;
+  transition: 2s ease-in-out;
 }
 
 .navContainer.sticky {
@@ -21,14 +16,9 @@ header div {
 }
 
 .logo {
-  /* position: relative; */
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
-}
-
-.navBar {
-  /* position: relative; */
 }
 
 .navBar a {
@@ -44,11 +34,55 @@ header div {
   color: var(--main-color);
 }
 
-.menuIcon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  cursor: pointer;
+.NavBarToggler {
   display: none;
+}
+
+.NavBarToggler {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.NavBarTogglerIcon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+  right: 20px;
+}
+.NavBarTogglerIcon:focus {
+  border-bottom: 2px solid #fff;
+}
+.NavBarTogglerIcon:after,
+.NavBarTogglerIcon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+.NavBarTogglerIcon:after {
+  top: 8px;
+}
+.NavBarToggler.NavBarTogglerX .NavBarTogglerIcon:after {
+  transform: rotate(45deg);
+  background-color: #fff;
+  height: 2px;
+}
+.NavBarToggler.NavBarTogglerX .NavBarTogglerIcon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #fff;
+  height: 2px;
+}
+.NavBarToggler.NavBarTogglerX .NavBarTogglerIcon {
+  border-color: transparent;
 }
 
 /* BREAKPOINT */
@@ -63,7 +97,7 @@ header div {
     background: var(--bg-color);
   }
 
-  .menuIcon {
+  .NavBarToggler {
     display: block;
   }
 
@@ -72,7 +106,7 @@ header div {
     top: 100%;
     left: -100%;
     width: 100%;
-    padding: 1rem 4%;
+    padding: 1rem 5%;
     background-color: var(--bg-color);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: 0.25s ease;

@@ -53,7 +53,16 @@ const NavBar2 = () => {
       </a>
 
       <div>
-        {!isHamActive ? (
+        <div
+          className={`${styles.NavBarToggler} ${
+            isHamActive ? styles.NavBarTogglerX : ""
+          }`}
+          onClick={() => setHamActive(!isHamActive)}
+        >
+          <span className={styles.NavBarTogglerIcon}></span>
+        </div>
+
+        {/* {!isHamActive ? (
           <HiMenu
             className={styles.menuIcon}
             onClick={() => setHamActive(true)}
@@ -63,7 +72,7 @@ const NavBar2 = () => {
             className={styles.menuIcon}
             onClick={() => setHamActive(false)}
           />
-        )}
+        )} */}
       </div>
 
       <nav
