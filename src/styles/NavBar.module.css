@@ -41,11 +41,8 @@
 
 .NavBarToggler {
   display: none;
-}
-
-.NavBarToggler {
-  padding: 15px;
   cursor: pointer;
+  padding: 10px 10px 15px 25px;
 }
 
 .NavBarTogglerIcon {
