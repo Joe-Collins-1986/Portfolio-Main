@@ -1,126 +1,119 @@
-import { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/NavBar.module.css";
-import { BiLogoLinkedin } from "react-icons/bi";
-import { BsFacebook, BsGithub } from "react-icons/bs";
+import uStyles from "../styles/MultiUse.module.css";
+import { HiMenu } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+import { useSection } from "../hooks/useSection";
+import SpanSwipe from "./SpanSwipe";
 
-const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
-  const [expanded, setExpanded] = useState(false);
+const NavBar2 = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHamActive, setHamActive] = useState(false);
+  const navRef = useRef(null);
+  const activeSection = useSection([
+    "home",
+    "about",
+    "portfolio",
+    "experience",
+    // "skills",
+    "contact",
+  ]);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+    const scrollListener = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    const handleClickOutside = (event) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        isHamActive
+      ) {
+        setHamActive(false);
       }
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", scrollListener);
+    document.addEventListener("mousedown", handleClickOutside);
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const onUpdateActiveLink = (name) => {
-    setActiveLink(name);
-    setExpanded(false);
-  };
-
-  const handleToggle = () => {
-    setExpanded((prevExpanded) => !prevExpanded);
-    NavBar.classList.toggle("expanded");
-  };
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isHamActive]);
 
   return (
-    <Navbar
-      expand="lg"
-      expanded={expanded}
-      className={`${styles.NavBar} ${scrolled ? styles.Scrolled : ""}`}
+    <header
+      ref={navRef}
+      className={`${styles.navContainer} ${isScrolled ? styles.sticky : ""}`}
     >
-      <Container fluid={true}>
-        <Navbar.Brand href="#home" className={styles.Brand}>
-          LOGO
-        </Navbar.Brand>
+      <a href="#" className={styles.logo}>
+        Joe
+      </a>
 
-        <Navbar.Toggle
-          // aria-controls="basic-navbar-nav"
-          aria-expanded={expanded ? true : false}
-          className={styles.NavBarToggler}
-          onClick={handleToggle}
+      <div>
+        {!isHamActive ? (
+          <HiMenu
+            className={styles.menuIcon}
+            onClick={() => setHamActive(true)}
+          />
+        ) : (
+          <AiOutlineClose
+            className={styles.menuIcon}
+            onClick={() => setHamActive(false)}
+          />
+        )}
+      </div>
+
+      <nav
+        className={`${styles.navBar} ${isHamActive ? styles.navActive : ""}`}
+      >
+        <a
+          href="#home"
+          className={activeSection === "home" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
         >
-          <span className={styles.NavBarTogglerIcon}></span>
-        </Navbar.Toggle>
-
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={`me-auto ${styles.CenteredNav}`}>
-            <Nav.Link
-              href="#home"
-              className={`${styles.NavBarLink} ${
-                activeLink === "home" ? styles.NavBarLinkActive : ""
-              }`}
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
-              className={`${styles.NavBarLink} ${
-                activeLink === "skills" ? styles.NavBarLinkActive : ""
-              }`}
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={`${styles.NavBarLink} ${
-                activeLink === "projects" ? styles.NavBarLinkActive : ""
-              }`}
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="#cv"
-              className={`${styles.NavBarLink} ${
-                activeLink === "cv" ? styles.NavBarLinkActive : ""
-              }`}
-              onClick={() => onUpdateActiveLink("cv")}
-            >
-              CV
-            </Nav.Link>
-          </Nav>
-
-          <span className={styles.NavBarText}>
-            <div className={styles.SocialContactWrapper}>
-              <div className={styles.SocialIcons}>
-                <a href="#">
-                  <BsGithub className={styles.SocialIconComponent} />
-                </a>
-                <a href="#">
-                  <BiLogoLinkedin className={styles.SocialIconComponent} />
-                </a>
-                <a href="#">
-                  <BsFacebook className={styles.SocialIconComponent} />
-                </a>
-              </div>
-
-              <button
-                className={styles.ContactButton}
-                onClick={() => console.log("connect")}
-              >
-                <span>Contact Me</span>
-              </button>
-            </div>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          Home
+        </a>
+        <a
+          href="#about"
+          className={activeSection === "about" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          About
+        </a>
+        <a
+          href="#portfolio"
+          className={activeSection === "portfolio" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          Portfolio
+        </a>
+        <a
+          href="#experience"
+          className={activeSection === "experience" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          Experience
+        </a>
+        {/* <a
+          href="#skills"
+          className={activeSection === "skills" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          Skills
+        </a> */}
+        <a
+          href="#contact"
+          className={activeSection === "contact" ? styles.active : ""}
+          onClick={() => setHamActive(false)}
+        >
+          Contact
+        </a>
+      </nav>
+    </header>
   );
 };
 
-export default NavBar;
+export default NavBar2;
