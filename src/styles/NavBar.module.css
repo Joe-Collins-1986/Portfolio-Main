@@ -1,6 +1,6 @@
 .navContainer {
   position: fixed;
-  z-index: 9999;
+  z-index: 100;
   top: 0;
   width: 100%;
   padding: 2rem 10%;
@@ -19,6 +19,7 @@
   font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
+  z-index: 1;
 }
 
 .navBar a {
@@ -32,6 +33,10 @@
 .navBar a:hover,
 .navBar a.active {
   color: var(--main-color);
+}
+
+.homeSci {
+  display: none;
 }
 
 .NavBarToggler {
@@ -104,12 +109,18 @@
   .navBar {
     position: absolute;
     top: 100%;
+
     left: -100%;
     width: 100%;
-    padding: 1rem 5%;
+    padding: 2rem 5%;
     background-color: var(--bg-color);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .navBar.navActive {
@@ -119,6 +130,53 @@
   .navBar a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .homeSci {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeSci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.2rem solid var(--text-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 2rem 1rem;
+  }
+
+  .homeSci a:hover {
+    color: var(--bg-color);
+    border: var(--main-color);
+  }
+
+  .homeSci a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 50%;
+    transform: scale(0);
+  }
+
+  .homeSci a:hover::before {
+    transform: scale(1);
   }
 }

@@ -5,6 +5,8 @@ import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
+import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
+import { PiGithubLogoFill } from "react-icons/pi";
 
 const NavBar2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,18 +63,6 @@ const NavBar2 = () => {
         >
           <span className={styles.NavBarTogglerIcon}></span>
         </div>
-
-        {/* {!isHamActive ? (
-          <HiMenu
-            className={styles.menuIcon}
-            onClick={() => setHamActive(true)}
-          />
-        ) : (
-          <AiOutlineClose
-            className={styles.menuIcon}
-            onClick={() => setHamActive(false)}
-          />
-        )} */}
       </div>
 
       <nav
@@ -106,13 +96,6 @@ const NavBar2 = () => {
         >
           Experience
         </a>
-        {/* <a
-          href="#skills"
-          className={activeSection === "skills" ? styles.active : ""}
-          onClick={() => setHamActive(false)}
-        >
-          Skills
-        </a> */}
         <a
           href="#contact"
           className={activeSection === "contact" ? styles.active : ""}
@@ -120,6 +103,23 @@ const NavBar2 = () => {
         >
           Contact
         </a>
+
+        <div className={styles.homeSci}>
+          <a href="#">
+            <BiLogoFacebook />
+          </a>
+          <a href="#">
+            <BiLogoTwitter />
+          </a>
+          <a href="#">
+            <PiGithubLogoFill />
+          </a>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={6}
+          />
+        </div>
       </nav>
     </header>
   );
