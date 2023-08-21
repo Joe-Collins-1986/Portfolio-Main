@@ -5,6 +5,7 @@ import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
+import smoke from "../assets/videos/smoke.mp4";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
@@ -22,12 +23,34 @@ const Home = () => {
         </h1>
 
         <div className={styles.textAnimate}>
-          <h3>Fullstack Developer</h3>
-          <SpanSwipe
+          <video src={smoke} autoPlay muted></video>
+
+          <h3>
+            <span>F</span>
+            <span>U</span>
+            <span>L</span>
+            <span>L</span>
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>K</span>
+            <span>&nbsp;</span>
+            <span>D</span>
+            <span>E</span>
+            <span>V</span>
+            <span>E</span>
+            <span>L</span>
+            <span>O</span>
+            <span>P</span>
+            <span>E</span>
+            <span>R</span>
+          </h3>
+          {/* <SpanSwipe
             activeSection={activeSection}
             colour={"animateBg"}
             delay={3}
-          />
+          /> */}
         </div>
         <p>
           Work with me to bring your digital dreams to life through the seamless

@@ -25,11 +25,107 @@
 }
 
 .homeContent .textAnimate {
+  margin-top: 30px;
   position: relative;
-  width: 33rem;
+  width: 40rem;
 }
 
 .homeContent .textAnimate h3 {
+  width: 45rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.textAnimate h3 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+}
+
+video {
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  height: 15rem;
+  width: 50rem;
+  object-fit: cover;
+}
+
+h3 span:nth-child(1) {
+  animation-delay: 1s;
+}
+h3 span:nth-child(2) {
+  animation-delay: 1.25s;
+}
+h3 span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+h3 span:nth-child(4) {
+  animation-delay: 1.75s;
+}
+h3 span:nth-child(5) {
+  animation-delay: 2s;
+}
+h3 span:nth-child(6) {
+  animation-delay: 2.25s;
+}
+h3 span:nth-child(7) {
+  animation-delay: 2.5s;
+}
+h3 span:nth-child(8) {
+  animation-delay: 2.75s;
+}
+h3 span:nth-child(9) {
+  animation-delay: 3s;
+}
+h3 span:nth-child(10) {
+  animation-delay: 3.25s;
+}
+h3 span:nth-child(11) {
+  animation-delay: 3.5s;
+}
+h3 span:nth-child(12) {
+  animation-delay: 3.75s;
+}
+
+h3 span:nth-child(13) {
+  animation-delay: 4s;
+}
+h3 span:nth-child(14) {
+  animation-delay: 4.25s;
+}
+h3 span:nth-child(15) {
+  animation-delay: 4.5s;
+}
+h3 span:nth-child(16) {
+  animation-delay: 4.75s;
+}
+h3 span:nth-child(17) {
+  animation-delay: 5s;
+}
+h3 span:nth-child(18) {
+  animation-delay: 5.25s;
+}
+h3 span:nth-child(19) {
+  animation-delay: 5.5s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+/* .homeContent .textAnimate h3 {
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
@@ -53,7 +149,7 @@
   z-index: -1;
   animation: homeCursorText 6s linear infinite;
   animation-delay: 2s;
-}
+} */
 
 .homeContent p {
   position: relative;
@@ -62,8 +158,8 @@
 }
 
 .homeSci {
+  position: relative;
   margin: 3rem 0;
-  bottom: 4rem;
   width: 150px;
   display: flex;
   justify-content: space-between;
@@ -203,7 +299,7 @@
 }
 
 /* KEYFRAMES ANIMATION */
-@keyframes homeBgText {
+/* @keyframes homeBgText {
   0%,
   10%,
   100% {
@@ -234,4 +330,4 @@
   81% {
     opacity: 0;
   }
-}
+} */
