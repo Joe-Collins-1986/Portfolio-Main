@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/HomeTest.module.css";
 import uStyles from "../styles/MultiUse.module.css";
 import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
 
-const Home = () => {
+const HomeTest = () => {
   const activeSection = useSection(["home"]);
 
   return (
@@ -56,35 +56,35 @@ const Home = () => {
             delay={5}
           />
         </div>
+      </div>
 
-        <div className={styles.homeSci}>
-          <a href="#">
-            <BiLogoFacebook />
-          </a>
-          <a href="#">
-            <BiLogoTwitter />
-          </a>
-          <a href="#">
-            <PiGithubLogoFill />
-          </a>
-          <SpanSwipe
-            activeSection={activeSection}
-            colour={"animateBg"}
-            delay={6}
-          />
-        </div>
-
-        <div className={styles.homeImgHover}></div>
-
+      <div className={styles.homeSci}>
+        <a href="#">
+          <BiLogoFacebook />
+        </a>
+        <a href="#">
+          <BiLogoTwitter />
+        </a>
+        <a href="#">
+          <PiGithubLogoFill />
+        </a>
         <SpanSwipe
           activeSection={activeSection}
           colour={"animateBg"}
           delay={6}
-          image={true}
         />
       </div>
+
+      <div className={styles.homeImgHover}></div>
+
+      <SpanSwipe
+        activeSection={activeSection}
+        colour={"animateBg"}
+        delay={6}
+        image={true}
+      />
     </section>
   );
 };
 
-export default Home;
+export default HomeTest;

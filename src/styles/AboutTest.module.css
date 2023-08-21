@@ -10,6 +10,12 @@
   z-index: 0;
 }
 
+/* .heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+} */
+
 .aboutImg {
   position: relative;
   width: 25rem;
