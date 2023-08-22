@@ -6,7 +6,6 @@ import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
 import smoke from "../assets/videos/test.webm";
-import newsmoke from "../assets/videos/new.mp4";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
@@ -25,8 +24,7 @@ const Home = () => {
 
         {activeSection && (
           <div className={styles.textAnimate}>
-            {/* <video src={smoke} autoPlay muted playsInline></video> */}
-            <video src={newsmoke} autoPlay muted playsInline></video>
+            <video src={smoke} autoPlay muted playsInline></video>
             <h3>
               <span>F</span>
               <span>U</span>
