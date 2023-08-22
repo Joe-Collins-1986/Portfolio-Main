@@ -24,7 +24,7 @@ const Home = () => {
 
         {activeSection && (
           <div className={styles.textAnimate}>
-            <video src={smoke} autoPlay muted></video>
+            <video src={smoke} autoPlay muted playsInline></video>
             <h3>
               <span>F</span>
               <span>U</span>
