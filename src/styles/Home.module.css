@@ -25,20 +25,21 @@
   z-index: 5;
 }
 
-.homeContent .textAnimate {
+/* SMOKE */
+.homeContent .smoke {
   margin-top: 30px;
   position: relative;
   width: 40rem;
 }
 
-.homeContent .textAnimate h3 {
+.homeContent .smoke h3 {
   width: 45rem;
   font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
 }
 
-.textAnimate h3 span {
+.smoke h3 span {
   opacity: 0;
   display: inline-block;
   animation: animate 1s linear forwards;
@@ -55,7 +56,7 @@ video {
   animation: disapear 6s linear forwards;
 }
 
-.homeContent .textAnimate h3::before {
+.homeContent .smoke h3::before {
   content: "";
   position: absolute;
   top: -5rem;
@@ -124,7 +125,15 @@ h3 span:nth-child(19) {
   animation-delay: 4.8s;
 }
 
-/* .homeContent .textAnimate h3 {
+/* ANIMATE */
+
+.homeContent .textAnimate {
+  margin-top: 30px;
+  position: relative;
+  width: 37rem;
+}
+
+.homeContent .textAnimate h3 {
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
@@ -132,7 +141,7 @@ h3 span:nth-child(19) {
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  background-position: -33rem, 0;
+  background-position: -37rem, 0;
   animation: homeBgText 6s linear infinite;
   animation-delay: 2s;
 }
@@ -148,7 +157,7 @@ h3 span:nth-child(19) {
   z-index: -1;
   animation: homeCursorText 6s linear infinite;
   animation-delay: 2s;
-} */
+}
 
 .homeContent p {
   position: relative;
@@ -347,11 +356,11 @@ h3 span:nth-child(19) {
   }
 }
 
-/* @keyframes homeBgText {
+@keyframes homeBgText {
   0%,
   10%,
   100% {
-    background-position: -33rem 0;
+    background-position: -37rem 0;
   }
 
   65%,
@@ -378,4 +387,4 @@ h3 span:nth-child(19) {
   81% {
     opacity: 0;
   }
-} */
+}

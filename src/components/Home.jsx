@@ -31,10 +31,8 @@ const Home = () => {
           />
         </h1>
 
-        {isIOS ? <h1>IOS</h1> : <h1>NOT IOS</h1>}
-
-        {activeSection && (
-          <div className={styles.textAnimate}>
+        {activeSection ? (
+          <div className={styles.smoke}>
             <video src={smoke} autoPlay muted playsInline></video>
             <h3>
               <span>F</span>
@@ -56,6 +54,17 @@ const Home = () => {
               <span>P</span>
               <span>E</span>
               <span>R</span>
+            </h3>
+          </div>
+        ) : (
+          <div className={styles.textAnimate}>
+            <h3>
+              FULLSTACK DEVELOPER
+              <SpanSwipe
+                activeSection={activeSection}
+                colour={"animateBg"}
+                delay={3}
+              />
             </h3>
           </div>
         )}
