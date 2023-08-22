@@ -295,14 +295,14 @@ h3 span:nth-child(19) {
     margin: 5rem 0 2rem 0;
   }
 
-  .homeContent .textAnimate {
+  .homeContent .smoke {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
   }
 
-  .homeContent .textAnimate h3 {
+  .homeContent .smoke h3 {
     width: 36rem;
     font-size: 2.8rem;
   }
@@ -311,7 +311,7 @@ h3 span:nth-child(19) {
     width: 47rem;
   }
 
-  .homeContent .textAnimate h3::before {
+  .homeContent .smoke h3::before {
     width: 47rem;
   }
 }
