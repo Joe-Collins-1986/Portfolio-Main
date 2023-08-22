@@ -52,7 +52,7 @@ video {
   height: 15rem;
   width: 50rem;
   object-fit: cover;
-  animation-delay: 1s;
+
   animation: disapear 6s linear forwards;
 }
 
@@ -126,7 +126,6 @@ h3 span:nth-child(19) {
 }
 
 /* ANIMATE */
-
 .homeContent .textAnimate {
   margin-top: 30px;
   position: relative;

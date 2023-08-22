@@ -52,16 +52,14 @@ const About = () => {
           />
         </p>
 
-        <div className={`${uStyles.btnBox} ${uStyles.btns}`}>
-          <a href="#" className={uStyles.btn}>
-            Read More
-          </a>
+        <a href="#" className={uStyles.btn}>
+          Read More
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
             delay={5}
           />
-        </div>
+        </a>
       </div>
     </section>
   );

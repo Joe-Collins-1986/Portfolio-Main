@@ -84,19 +84,14 @@ const Home = () => {
           />
         </p>
 
-        <div className={uStyles.btnBox}>
-          <a href="#" className={uStyles.btn}>
-            Hire Me
-          </a>
-          <a href="#" className={uStyles.btn}>
-            Let's Talk
-          </a>
+        <a href="#" className={uStyles.btn}>
+          Let's Talk
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateBg"}
             delay={5}
           />
-        </div>
+        </a>
 
         <div className={styles.homeSci}>
           <a href="#">

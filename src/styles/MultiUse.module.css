@@ -5,15 +5,32 @@
   text-align: center;
 }
 
-.btnBox {
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* .btnBox {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 34.5rem;
   height: 5rem;
-}
+} */
 
-.btnBox .btn {
+/* .btnBox .btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -30,9 +47,9 @@
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
-}
+} */
 
-.btnBox .btn:hover {
+/* .btnBox .btn:hover {
   color: var(--main-color);
 }
 
@@ -47,9 +64,9 @@
 
   z-index: -1;
   transition: 0.5s;
-}
+} */
 
-.btnBox .btn:nth-child(2) {
+/* .btnBox .btn:nth-child(2) {
   background: transparent;
   color: var(--main-color);
 }
@@ -64,16 +81,16 @@
 
 .btnBox .btn:hover::before {
   width: 100%;
-}
+} */
 
-.btnBox.btns {
+/* .btnBox.btns {
   display: inline-block;
   width: 15rem;
 }
 
 .btnBox.btns a::before {
   background: var(--second-bg-color);
-}
+} */
 
 /* ANIMATE */
 .animateBg {
