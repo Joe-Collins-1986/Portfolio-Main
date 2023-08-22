@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import uStyles from "../styles/MultiUse.module.css";
 import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
@@ -9,6 +9,15 @@ import smoke from "../assets/videos/test.webm";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
+  const [isIOS, setIsIOS] = useState(false);
+
+  useEffect(() => {
+    // Check if user is on an iOS device
+    const iOS =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    setIsIOS(iOS);
+  }, []);
 
   return (
     <section className={styles.home} id="home">
@@ -21,6 +30,8 @@ const Home = () => {
             delay={2}
           />
         </h1>
+
+        {isIOS ? <h1>IOS</h1> : <h1>NOT IOS</h1>}
 
         {activeSection && (
           <div className={styles.textAnimate}>
