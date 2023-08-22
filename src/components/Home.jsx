@@ -31,43 +31,44 @@ const Home = () => {
           />
         </h1>
 
-        {activeSection ? (
-          <div className={styles.smoke}>
-            <video src={smoke} autoPlay muted playsInline></video>
-            <h3>
-              <span>F</span>
-              <span>U</span>
-              <span>L</span>
-              <span>L</span>
-              <span>S</span>
-              <span>T</span>
-              <span>A</span>
-              <span>C</span>
-              <span>K</span>
-              <span>&nbsp;</span>
-              <span>D</span>
-              <span>E</span>
-              <span>V</span>
-              <span>E</span>
-              <span>L</span>
-              <span>O</span>
-              <span>P</span>
-              <span>E</span>
-              <span>R</span>
-            </h3>
-          </div>
-        ) : (
-          <div className={styles.textAnimate}>
-            <h3>
-              FULLSTACK DEVELOPER
-              <SpanSwipe
-                activeSection={activeSection}
-                colour={"animateBg"}
-                delay={3}
-              />
-            </h3>
-          </div>
-        )}
+        {activeSection &&
+          (!isIOS ? (
+            <div className={styles.smoke}>
+              <video src={smoke} autoPlay muted playsInline></video>
+              <h3>
+                <span>F</span>
+                <span>U</span>
+                <span>L</span>
+                <span>L</span>
+                <span>S</span>
+                <span>T</span>
+                <span>A</span>
+                <span>C</span>
+                <span>K</span>
+                <span>&nbsp;</span>
+                <span>D</span>
+                <span>E</span>
+                <span>V</span>
+                <span>E</span>
+                <span>L</span>
+                <span>O</span>
+                <span>P</span>
+                <span>E</span>
+                <span>R</span>
+              </h3>
+            </div>
+          ) : (
+            <div className={styles.textAnimate}>
+              <h3>
+                FULLSTACK DEVELOPER
+                <SpanSwipe
+                  activeSection={activeSection}
+                  colour={"animateBg"}
+                  delay={3}
+                />
+              </h3>
+            </div>
+          ))}
 
         <p>
           Work with me to bring your digital dreams to life through the seamless
