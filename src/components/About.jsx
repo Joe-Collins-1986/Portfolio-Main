@@ -19,7 +19,17 @@ const About = () => {
         />
       </h2>
 
-      <div className={styles.aboutImg}>
+      <div className={styles.box}>
+        <div className={styles.aboutImg}>
+          <img src={image} alt="face"></img>
+          <h2>Joe Collins</h2>
+          <a href="#" className={uStyles.btn}>
+            Let's talk!
+          </a>
+        </div>
+      </div>
+
+      {/* <div className={styles.aboutImg}>
         <img src={image} alt="face"></img>
         <span className={styles.circleSpin}></span>
         <SpanSwipe
@@ -27,7 +37,7 @@ const About = () => {
           colour={"animateSecBg"}
           delay={2}
         />
-      </div>
+      </div> */}
 
       <div className={styles.aboutContent}>
         <h3>
