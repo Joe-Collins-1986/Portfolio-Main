@@ -27,17 +27,12 @@ const About = () => {
             Let's talk!
           </a>
         </div>
-      </div>
-
-      {/* <div className={styles.aboutImg}>
-        <img src={image} alt="face"></img>
-        <span className={styles.circleSpin}></span>
         <SpanSwipe
           activeSection={activeSection}
           colour={"animateSecBg"}
           delay={2}
         />
-      </div> */}
+      </div>
 
       <div className={styles.aboutContent}>
         <h3>

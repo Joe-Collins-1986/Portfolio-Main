@@ -16,7 +16,7 @@ const NavBar2 = () => {
     "home",
     "about",
     "portfolio",
-    "experience",
+    // "experience",
     // "skills",
     "contact",
   ]);
@@ -89,13 +89,7 @@ const NavBar2 = () => {
         >
           Portfolio
         </a>
-        <a
-          href="#experience"
-          className={activeSection === "experience" ? styles.active : ""}
-          onClick={() => setHamActive(false)}
-        >
-          Experience
-        </a>
+
         <a
           href="#contact"
           className={activeSection === "contact" ? styles.active : ""}
