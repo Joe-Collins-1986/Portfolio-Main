@@ -34,11 +34,9 @@ const Contact = () => {
           <span className={styles.focus}></span>
         </div>
 
-        <div className={`${uStyles.btnBox} ${uStyles.btns}`}>
-          <button type="submit" className={uStyles.btn}>
-            Submit
-          </button>
-        </div>
+        <button type="submit" className={uStyles.btn}>
+          Submit
+        </button>
       </form>
     </section>
   );

@@ -45,14 +45,14 @@ const About = () => {
           />
         </h3>
 
-        <div>
+        <div className={styles.skillTags}>
           <button>HTML</button>
           <button>CSS</button>
           <button>JS</button>
           <button>Python</button>
         </div>
 
-        <div>
+        <div className={styles.skillTags}>
           <button>React</button>
           <button>Django</button>
           <button>DRF</button>

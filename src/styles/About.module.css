@@ -1,5 +1,5 @@
 .about {
-  min-height: auto;
+  /* min-height: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +98,7 @@
   margin: 2rem 0 3rem;
 }
 
-button {
+.skillTags button {
   pointer-events: none;
   margin: 0.5rem 0.5rem;
   width: 8rem;
