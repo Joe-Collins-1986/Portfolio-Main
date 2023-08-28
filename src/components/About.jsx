@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/About.module.css";
 import uStyles from "../styles/MultiUse.module.css";
 import image from "../assets/images/portfolio_face.png";
@@ -7,6 +7,7 @@ import SpanSwipe from "./SpanSwipe";
 
 const About = () => {
   const activeSection = useSection(["about"]);
+  const [isreadMore, setreadMore] = useState(false);
 
   return (
     <section className={styles.about} id="about">
@@ -57,8 +58,19 @@ const About = () => {
           />
         </p>
 
-        <a href="#" className={uStyles.btn}>
-          Read More
+        {isreadMore && (
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+            ratione sed. Quia enim veniam excepturi. Tenetur, accusantium. Eos,
+            unde impedit consequatur reiciendis sequi minima aperiam temporibus
+            voluptates. Earum, facilis cum voluptatibus dicta culpa, dolor
+            possimus ex, ipsa excepturi nisi corporis debitis sequi voluptate
+            impedit dolorem quia facere? Distinctio, natus aliquam.
+          </p>
+        )}
+
+        <a className={uStyles.btn} onClick={() => setreadMore(!isreadMore)}>
+          {isreadMore ? "Read Less" : "Read More"}
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
