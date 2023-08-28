@@ -22,18 +22,6 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className={styles.inputBox}>
-          <div className={styles.inputField}>
-            <input type="number" placeholder="Mobile Number" />
-            <span className={styles.focus}></span>
-          </div>
-
-          <div className={styles.inputField}>
-            <input type="text" placeholder="Email Subject*" required />
-            <span className={styles.focus}></span>
-          </div>
-        </div>
-
         <div className={styles.textareaField}>
           <textarea
             name=""
