@@ -44,7 +44,8 @@
 }
 
 .animateBg.animate1.animateImage {
-  width: calc(100vw - 60rem);
+  width: calc(100vw);
+  z-index: -5;
 }
 
 .animateBg.animate1,

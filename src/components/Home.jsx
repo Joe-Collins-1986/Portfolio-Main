@@ -115,7 +115,7 @@ const Home = () => {
         <SpanSwipe
           activeSection={activeSection}
           colour={"animateBg"}
-          delay={6}
+          delay={8}
           image={true}
         />
       </div>
