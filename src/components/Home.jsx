@@ -84,6 +84,15 @@ const Home = () => {
           />
         </p>
 
+        <a href="#" className={`${uStyles.btn} ${styles.downloadCVBtn}`}>
+          Download CV
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateBg"}
+            delay={5}
+          />
+        </a>
+
         <a href="#" className={uStyles.btn}>
           Let's Talk
           <SpanSwipe

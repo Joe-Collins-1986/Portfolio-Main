@@ -25,6 +25,10 @@
   z-index: 10;
 }
 
+.downloadCVBtn {
+  margin-right: 1.5rem;
+}
+
 /* SMOKE */
 .homeContent .smoke {
   margin-top: 30px;
