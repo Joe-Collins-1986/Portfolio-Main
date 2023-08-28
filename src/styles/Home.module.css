@@ -294,6 +294,11 @@ h3 span:nth-child(19) {
     text-align: center;
   }
 
+  .downloadCVBtn {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
   .homeSci {
     margin: 5rem 0 2rem 0;
   }
