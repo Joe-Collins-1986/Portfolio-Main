@@ -66,19 +66,53 @@
   margin: 0.3rem 0 1rem;
 }
 
-.portfolioLayer a {
+.homeSci {
+  position: relative;
+  margin: 1.5rem 0;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeSci a {
+  margin: 0 1rem;
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 5rem;
   height: 5rem;
-  background: var(--text-color);
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
   border-radius: 50%;
+  font-size: 20px;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
-.portfolioLayer a .link {
-  font-size: 2rem;
-  color: var(--second-bg-color);
+.homeSci a:hover {
+  color: var(--bg-color);
+}
+
+.homeSci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.homeSci a:hover::before {
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {

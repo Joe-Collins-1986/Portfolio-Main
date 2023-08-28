@@ -9,6 +9,7 @@ import travel from "../assets/images/travel-app.png";
 import bitwise from "../assets/images/bitwise.png";
 
 import { BiLinkExternal } from "react-icons/bi";
+import { PiGithubLogoFill } from "react-icons/pi";
 
 const Portfolio = () => {
   const activeSection = useSection(["portfolio"]);
@@ -28,17 +29,15 @@ const Portfolio = () => {
         <div className={styles.portfolioBox}>
           <img src={bitwise} alt="" />
           <div className={styles.portfolioLayer}>
-            <h4>Portfolio 1</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <div>
+            <h4>BitWise</h4>
+            <p>Code with friends!</p>
+
+            <div className={styles.homeSci}>
               <a href="#">
-                <BiLinkExternal className={styles.link} />
+                <BiLinkExternal />
               </a>
               <a href="#">
-                <BiLinkExternal className={styles.link} />
+                <PiGithubLogoFill />
               </a>
             </div>
           </div>
@@ -52,17 +51,14 @@ const Portfolio = () => {
         <div className={styles.portfolioBox}>
           <img src={travel} alt="" />
           <div className={styles.portfolioLayer}>
-            <h4>Portfolio 2</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <div>
+            <h4>Travlr</h4>
+            <p>Travel the world!</p>
+            <div className={styles.homeSci}>
               <a href="#">
-                <BiLinkExternal className={styles.link} />
+                <BiLinkExternal />
               </a>
               <a href="#">
-                <BiLinkExternal className={styles.link} />
+                <PiGithubLogoFill />
               </a>
             </div>
           </div>
@@ -76,14 +72,16 @@ const Portfolio = () => {
         <div className={styles.portfolioBox}>
           <img src={minesweeper} alt="" />
           <div className={styles.portfolioLayer}>
-            <h4>Portfolio 3</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
+            <h4>Minesweeper</h4>
+            <p>Blast from the past!</p>
+            <div className={styles.homeSci}>
+              <a href="#">
+                <BiLinkExternal />
+              </a>
+              <a href="#">
+                <PiGithubLogoFill />
+              </a>
+            </div>
           </div>
           <SpanSwipe
             activeSection={activeSection}
@@ -95,14 +93,16 @@ const Portfolio = () => {
         <div className={styles.portfolioBox}>
           <img src={hangman} alt="" />
           <div className={styles.portfolioLayer}>
-            <h4>Portfolio 4</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
+            <h4>Hangman</h4>
+            <p>Kill some time!</p>
+            <div className={styles.homeSci}>
+              <a href="#">
+                <BiLinkExternal />
+              </a>
+              <a href="#">
+                <PiGithubLogoFill />
+              </a>
+            </div>
           </div>
           <SpanSwipe
             activeSection={activeSection}
