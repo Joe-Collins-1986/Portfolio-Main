@@ -9,7 +9,7 @@
 
 .portfolioContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2.5rem;
 }
@@ -20,6 +20,7 @@
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 .portfolioBox img {
@@ -38,15 +39,17 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), var(--second-bg-color));
+  border: 0.25rem solid var(--main-color);
+  border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 0 4rem;
-  transform: translateY(100%);
-  /* transition: 0.5s ease; */
+  transform: translateY(-105%);
+  transition: 0.5s ease;
 }
 
 .portfolioBox:hover .portfolioLayer {
@@ -55,6 +58,7 @@
 
 .portfolioLayer h4 {
   font-size: 3rem;
+  color: var(--main-color);
 }
 
 .portfolioLayer p {

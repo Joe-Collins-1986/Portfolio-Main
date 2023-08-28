@@ -3,12 +3,10 @@ import styles from "../styles/Portfolio.module.css";
 import uStyles from "../styles/MultiUse.module.css";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
-import image from "../assets/images/temp1.jpg";
-import image2 from "../assets/images/temp2.jpg";
-import image3 from "../assets/images/temp3.jpg";
-import image4 from "../assets/images/temp4.jpg";
-import image5 from "../assets/images/temp5.jpg";
-import image6 from "../assets/images/temp6.jpg";
+import hangman from "../assets/images/hangman.png";
+import minesweeper from "../assets/images/minesweeper.png";
+import travel from "../assets/images/travel-app.png";
+import bitwise from "../assets/images/bitwise.png";
 
 import { BiLinkExternal } from "react-icons/bi";
 
@@ -28,16 +26,21 @@ const Portfolio = () => {
 
       <div className={styles.portfolioContainer}>
         <div className={styles.portfolioBox}>
-          <img src={image} alt="" />
+          <img src={bitwise} alt="" />
           <div className={styles.portfolioLayer}>
             <h4>Portfolio 1</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
               unde?
             </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
+            <div>
+              <a href="#">
+                <BiLinkExternal className={styles.link} />
+              </a>
+              <a href="#">
+                <BiLinkExternal className={styles.link} />
+              </a>
+            </div>
           </div>
           <SpanSwipe
             activeSection={activeSection}
@@ -47,16 +50,21 @@ const Portfolio = () => {
         </div>
 
         <div className={styles.portfolioBox}>
-          <img src={image2} alt="" />
+          <img src={travel} alt="" />
           <div className={styles.portfolioLayer}>
             <h4>Portfolio 2</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
               unde?
             </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
+            <div>
+              <a href="#">
+                <BiLinkExternal className={styles.link} />
+              </a>
+              <a href="#">
+                <BiLinkExternal className={styles.link} />
+              </a>
+            </div>
           </div>
           <SpanSwipe
             activeSection={activeSection}
@@ -66,7 +74,7 @@ const Portfolio = () => {
         </div>
 
         <div className={styles.portfolioBox}>
-          <img src={image3} alt="" />
+          <img src={minesweeper} alt="" />
           <div className={styles.portfolioLayer}>
             <h4>Portfolio 3</h4>
             <p>
@@ -85,7 +93,7 @@ const Portfolio = () => {
         </div>
 
         <div className={styles.portfolioBox}>
-          <img src={image4} alt="" />
+          <img src={hangman} alt="" />
           <div className={styles.portfolioLayer}>
             <h4>Portfolio 4</h4>
             <p>
@@ -100,44 +108,6 @@ const Portfolio = () => {
             activeSection={activeSection}
             colour={"animateBg"}
             delay={5}
-          />
-        </div>
-
-        <div className={styles.portfolioBox}>
-          <img src={image5} alt="" />
-          <div className={styles.portfolioLayer}>
-            <h4>Portfolio 5</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
-          </div>
-          <SpanSwipe
-            activeSection={activeSection}
-            colour={"animateBg"}
-            delay={6}
-          />
-        </div>
-
-        <div className={styles.portfolioBox}>
-          <img src={image6} alt="" />
-          <div className={styles.portfolioLayer}>
-            <h4>Portfolio 6</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
-              unde?
-            </p>
-            <a href="#">
-              <BiLinkExternal className={styles.link} />
-            </a>
-          </div>
-          <SpanSwipe
-            activeSection={activeSection}
-            colour={"animateBg"}
-            delay={7}
           />
         </div>
       </div>

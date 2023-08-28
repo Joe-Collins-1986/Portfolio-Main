@@ -44,6 +44,22 @@ const About = () => {
             delay={3}
           />
         </h3>
+
+        <div>
+          <button>HTML</button>
+          <button>CSS</button>
+          <button>JS</button>
+          <button>Python</button>
+        </div>
+
+        <div>
+          <button>React</button>
+          <button>Django</button>
+          <button>DRF</button>
+          <button>Flask</button>
+          <button>FireBase</button>
+          <button>Git</button>
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
           ratione sed. Quia enim veniam excepturi. Tenetur, accusantium. Eos,
