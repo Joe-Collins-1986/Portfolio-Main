@@ -76,8 +76,12 @@ const Home = () => {
           blend of Python and Django's robust functionality with React's dynamic
           JavaScript library.
           <br />
-          <br />
-          Let's explore what's possible together!
+          {!isIOS && (
+            <>
+              <br />
+              Let's explore what's possible together!
+            </>
+          )}
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateBg"}
