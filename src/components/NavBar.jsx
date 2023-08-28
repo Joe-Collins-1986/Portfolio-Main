@@ -12,14 +12,7 @@ const NavBar2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHamActive, setHamActive] = useState(false);
   const navRef = useRef(null);
-  const activeSection = useSection([
-    "home",
-    "about",
-    "portfolio",
-    // "experience",
-    // "skills",
-    "contact",
-  ]);
+  const activeSection = useSection(["home", "about", "portfolio", "contact"]);
 
   useEffect(() => {
     const scrollListener = () => {
@@ -51,7 +44,7 @@ const NavBar2 = () => {
       className={`${styles.navContainer} ${isScrolled ? styles.sticky : ""}`}
     >
       <a href="#" className={styles.logo}>
-        Joe
+        My <span>Portfolio</span>
       </a>
 
       <div>

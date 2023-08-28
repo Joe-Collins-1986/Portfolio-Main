@@ -33,10 +33,18 @@ const Portfolio = () => {
             <p>Code with friends!</p>
 
             <div className={styles.homeSci}>
-              <a href="#">
+              <a
+                href="https://bit-wise-front-end.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BiLinkExternal />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/Joe-Collins-1986/BitWise-Front-End/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <PiGithubLogoFill />
               </a>
             </div>
@@ -54,10 +62,18 @@ const Portfolio = () => {
             <h4>Travlr</h4>
             <p>Travel the world!</p>
             <div className={styles.homeSci}>
-              <a href="#">
+              <a
+                href="https://traval-app.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BiLinkExternal />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/Joe-Collins-1986/travel-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <PiGithubLogoFill />
               </a>
             </div>
@@ -75,10 +91,18 @@ const Portfolio = () => {
             <h4>Minesweeper</h4>
             <p>Blast from the past!</p>
             <div className={styles.homeSci}>
-              <a href="#">
+              <a
+                href="https://minesweeper-python-project.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BiLinkExternal />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/Joe-Collins-1986/minesweeper/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <PiGithubLogoFill />
               </a>
             </div>
@@ -96,10 +120,18 @@ const Portfolio = () => {
             <h4>Hangman</h4>
             <p>Kill some time!</p>
             <div className={styles.homeSci}>
-              <a href="#">
+              <a
+                href="https://joe-collins-1986.github.io/Hangman/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BiLinkExternal />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/Joe-Collins-1986/Hangman/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <PiGithubLogoFill />
               </a>
             </div>

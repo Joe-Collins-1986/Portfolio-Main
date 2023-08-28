@@ -24,7 +24,7 @@ const About = () => {
         <div className={styles.aboutImg}>
           <img src={image} alt="face"></img>
           <h2>Joe Collins</h2>
-          <a href="#" className={uStyles.btn}>
+          <a href="#contact" className={uStyles.btn}>
             Let's talk!
           </a>
         </div>

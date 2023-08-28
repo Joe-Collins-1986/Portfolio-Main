@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import uStyles from "../styles/MultiUse.module.css";
-import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
+import { BiLogoFacebook, BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
 import smoke from "../assets/videos/test.webm";
+import myCv from "../assets/files/cv.pdf";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
@@ -83,8 +84,11 @@ const Home = () => {
             delay={4}
           />
         </p>
-
-        <a href="#" className={`${uStyles.btn} ${styles.downloadCVBtn}`}>
+        <a
+          className={`${uStyles.btn} ${styles.downloadCVBtn}`}
+          href={myCv}
+          download
+        >
           Download CV
           <SpanSwipe
             activeSection={activeSection}
@@ -93,7 +97,7 @@ const Home = () => {
           />
         </a>
 
-        <a href="#" className={uStyles.btn}>
+        <a href="#contact" className={uStyles.btn}>
           Let's Talk
           <SpanSwipe
             activeSection={activeSection}
@@ -103,13 +107,18 @@ const Home = () => {
         </a>
 
         <div className={styles.homeSci}>
-          <a href="#">
-            <BiLogoFacebook />
+          <a
+            href="https://www.linkedin.com/in/joseph-collins-129788b2/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BiLogoLinkedin />
           </a>
-          <a href="#">
-            <BiLogoTwitter />
-          </a>
-          <a href="#">
+          <a
+            href="https://github.com/Joe-Collins-1986/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <PiGithubLogoFill />
           </a>
           <SpanSwipe
