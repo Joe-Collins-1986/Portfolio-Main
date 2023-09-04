@@ -50,6 +50,11 @@ const About = () => {
           <button>CSS</button>
           <button>JS</button>
           <button>Python</button>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateSecBg"}
+            delay={4}
+          />
         </div>
 
         <div className={styles.skillTags}>
@@ -59,6 +64,11 @@ const About = () => {
           <button>Flask</button>
           <button>FireBase</button>
           <button>Git</button>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateSecBg"}
+            delay={4}
+          />
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
@@ -70,7 +80,7 @@ const About = () => {
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
-            delay={4}
+            delay={5}
           />
         </p>
 
@@ -90,7 +100,7 @@ const About = () => {
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
-            delay={5}
+            delay={6}
           />
         </a>
       </div>

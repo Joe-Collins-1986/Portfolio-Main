@@ -40,7 +40,7 @@
   background: var(--second-bg-color);
   z-index: 1;
   border-radius: 50%;
-  animation: changeInset 3s forwards infinite 2s;
+  animation: changeInset 3s forwards infinite 1s;
 }
 
 .aboutImg {
