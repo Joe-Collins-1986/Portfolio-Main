@@ -2,8 +2,11 @@ import { useRef, useState } from "react";
 import styles from "../styles/Contact.module.css";
 import uStyles from "../styles/MultiUse.module.css";
 import emailjs from "@emailjs/browser";
+import { useSection } from "../hooks/useSection";
+import SpanSwipe from "./SpanSwipe";
 
 const Contact = () => {
+  const activeSection = useSection(["contact"]);
   const form = useRef();
   const [emailValid, setEmailValid] = useState(true);
   const [emailMessage, setEmailMessage] = useState(false);
@@ -62,6 +65,11 @@ const Contact = () => {
     <section className={styles.contact} id="contact">
       <h2 className={uStyles.heading}>
         Contact <span>Me</span>
+        <SpanSwipe
+          activeSection={activeSection}
+          colour={"animateSecBg"}
+          delay={1}
+        />
       </h2>
 
       <form ref={form} onSubmit={sendEmail}>
@@ -74,6 +82,11 @@ const Contact = () => {
               required
             />
             <span className={styles.focus}></span>
+            <SpanSwipe
+              activeSection={activeSection}
+              colour={"animateSecBg"}
+              delay={2}
+            />
           </div>
 
           <div className={styles.inputField}>
@@ -84,6 +97,11 @@ const Contact = () => {
               required
             />
             <span className={styles.focus}></span>
+            <SpanSwipe
+              activeSection={activeSection}
+              colour={"animateSecBg"}
+              delay={4}
+            />
           </div>
         </div>
 
@@ -100,6 +118,11 @@ const Contact = () => {
             required
           ></textarea>
           <span className={styles.focus}></span>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateSecBg"}
+            delay={6}
+          />
         </div>
 
         {emailMessage && (
@@ -108,6 +131,11 @@ const Contact = () => {
 
         <button type="submit" className={uStyles.btn}>
           Submit
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateSecBg"}
+            delay={7}
+          />
         </button>
       </form>
     </section>
