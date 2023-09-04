@@ -17,7 +17,10 @@ const Home = () => {
     const iOS =
       /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    setIsIOS(iOS);
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    setIsIOS(iOS || isSafari);
   }, []);
 
   return (
