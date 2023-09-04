@@ -20,20 +20,22 @@ const About = () => {
         />
       </h2>
 
-      <div className={styles.box}>
-        <div className={styles.aboutImg}>
-          <img src={image} alt="face"></img>
-          <h2>Joe Collins</h2>
-          <a href="#contact" className={uStyles.btn}>
-            Let's talk!
-          </a>
+      {activeSection && (
+        <div className={styles.box}>
+          <div className={styles.aboutImg}>
+            <img src={image} alt="face"></img>
+            <h2>Joe Collins</h2>
+            <a href="#contact" className={uStyles.btn}>
+              Let's talk!
+            </a>
+          </div>
+          <SpanSwipe
+            activeSection={activeSection}
+            colour={"animateSecBg"}
+            delay={2}
+          />
         </div>
-        <SpanSwipe
-          activeSection={activeSection}
-          colour={"animateSecBg"}
-          delay={2}
-        />
-      </div>
+      )}
 
       <div className={styles.aboutContent}>
         <h3>
