@@ -15,7 +15,6 @@
   height: 30rem;
   background: var(--second-bg-color);
   border-radius: 50%;
-
   overflow: hidden;
 }
 
@@ -25,9 +24,9 @@
   left: 0;
   top: 0;
   inset: -1rem 8rem;
-  background: linear-gradient(315deg, var(--main-color), var(--text-color));
+  background: var(--second-bg-color);
   transition: 0.5s;
-  animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite, changeColor 2s forwards;
 }
 
 .box:hover::before {
@@ -37,10 +36,11 @@
 .box::after {
   content: "";
   position: absolute;
-  inset: 0.25rem 0.25rem;
+  inset: 0rem 0rem;
   background: var(--second-bg-color);
   z-index: 1;
   border-radius: 50%;
+  animation: changeInset 3s forwards infinite 2s;
 }
 
 .aboutImg {
@@ -98,6 +98,10 @@
   margin: 2rem 0 3rem;
 }
 
+.skillTags {
+  position: relative;
+}
+
 .skillTags button {
   pointer-events: none;
   margin: 0.5rem 0.5rem;
@@ -107,6 +111,24 @@
   border: 0.25rem solid var(--main-color);
   border-radius: 1rem;
   color: var(--main-color);
+}
+
+@keyframes changeColor {
+  0%,
+  99% {
+    background: var(--second-bg-color);
+  }
+
+  100% {
+    background: linear-gradient(315deg, var(--main-color), var(--text-color));
+  }
+}
+
+@keyframes changeInset {
+  0%,
+  100% {
+    inset: -1rem 0.5rem;
+  }
 }
 
 @keyframes spin {

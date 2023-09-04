@@ -101,11 +101,6 @@ const NavBar2 = () => {
           <a href="#">
             <PiGithubLogoFill />
           </a>
-          <SpanSwipe
-            activeSection={activeSection}
-            colour={"animateBg"}
-            delay={6}
-          />
         </div>
       </nav>
     </header>
