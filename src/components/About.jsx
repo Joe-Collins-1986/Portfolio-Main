@@ -73,12 +73,13 @@ const About = () => {
           />
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-          ratione sed. Quia enim veniam excepturi. Tenetur, accusantium. Eos,
-          unde impedit consequatur reiciendis sequi minima aperiam temporibus
-          voluptates. Earum, facilis cum voluptatibus dicta culpa, dolor
-          possimus ex, ipsa excepturi nisi corporis debitis sequi voluptate
-          impedit dolorem quia facere? Distinctio, natus aliquam.
+          I've dedicated over a decade to the financial and procurement sectors,
+          specializing in the development and implementation of procedures, and
+          training for a wide array of processes and systems. Through this role,
+          I often collaborated with software developers, which ignited my drive
+          to transition into this field. To achieve this, I self-funded a
+          rigorous one-year online course at the Code Institute, and graduated
+          with a distinction in Full Stack Development.
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
@@ -88,12 +89,15 @@ const About = () => {
 
         {isreadMore && (
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-            ratione sed. Quia enim veniam excepturi. Tenetur, accusantium. Eos,
-            unde impedit consequatur reiciendis sequi minima aperiam temporibus
-            voluptates. Earum, facilis cum voluptatibus dicta culpa, dolor
-            possimus ex, ipsa excepturi nisi corporis debitis sequi voluptate
-            impedit dolorem quia facere? Distinctio, natus aliquam.
+            On a personal note, I love traveling the world with my wife, walking
+            my giant, lovable dog, and indulging with friends over good food and
+            drink.
+            <br />
+            <br />
+            P.S. If you find yourself enviously eyeing the handsome face on this
+            portfolio, don’t be fooled! As much as I wish it were mine, that's
+            just Midjourney's imaginative depiction of a techie version of me.
+            If only mirrors were as imaginative!
           </p>
         )}
 
