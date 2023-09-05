@@ -89,7 +89,11 @@ const Portfolio = () => {
           <img src={minesweeper} alt="" />
           <div className={styles.portfolioLayer}>
             <h4>Minesweeper</h4>
-            <p>Blast from the past!</p>
+            <p>
+              Blast from the past!
+              <br />
+              (Desktop only)
+            </p>
             <div className={styles.homeSci}>
               <a
                 href="https://minesweeper-python-project.herokuapp.com/"
