@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import uStyles from "../styles/MultiUse.module.css";
-import { BiLogoFacebook, BiLogoTwitter, BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";

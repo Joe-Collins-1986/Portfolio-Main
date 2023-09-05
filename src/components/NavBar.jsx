@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/NavBar.module.css";
-import uStyles from "../styles/MultiUse.module.css";
-import { HiMenu } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
 import { useSection } from "../hooks/useSection";
-import SpanSwipe from "./SpanSwipe";
-import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { PiGithubLogoFill } from "react-icons/pi";
 
 const NavBar2 = () => {
@@ -92,13 +88,18 @@ const NavBar2 = () => {
         </a>
 
         <div className={styles.homeSci}>
-          <a href="#">
-            <BiLogoFacebook />
+          <a
+            href="https://www.linkedin.com/in/joseph-collins-129788b2/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BiLogoLinkedin />
           </a>
-          <a href="#">
-            <BiLogoTwitter />
-          </a>
-          <a href="#">
+          <a
+            href="https://github.com/Joe-Collins-1986/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <PiGithubLogoFill />
           </a>
         </div>
