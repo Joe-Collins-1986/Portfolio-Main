@@ -31,7 +31,7 @@ const Home = () => {
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateBg"}
-            delay={2}
+            delay={0}
           />
         </h1>
 
