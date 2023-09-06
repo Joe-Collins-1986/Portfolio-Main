@@ -78,8 +78,8 @@ const About = () => {
           training for a wide array of processes and systems. Through this role,
           I often collaborated with software developers, which ignited my drive
           to transition into this field. To achieve this, I self-funded a
-          rigorous one-year online course at the Code Institute, and graduated
-          with a distinction in Full Stack Development.
+          rigorous one-year online university accredited diploma at the Code
+          Institute, and graduated with a distinction in Full Stack Development.
           <SpanSwipe
             activeSection={activeSection}
             colour={"animateSecBg"}
