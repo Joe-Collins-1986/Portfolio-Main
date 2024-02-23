@@ -6,7 +6,7 @@ import { PiGithubLogoFill } from "react-icons/pi";
 import { useSection } from "../hooks/useSection";
 import SpanSwipe from "./SpanSwipe";
 import smoke from "../assets/videos/test.webm";
-import myCv from "../assets/files/cv_2023.08.30.pdf";
+import myCv from "../assets/files/CV_programming_2024.01.30.pdf";
 
 const Home = () => {
   const activeSection = useSection(["home"]);
